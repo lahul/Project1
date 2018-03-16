@@ -1,6 +1,7 @@
 
 var mysql=require('mysql');
 var fs = require('fs');
+router = require("express").Router();
 
 var data=[{
     "id": 1,
@@ -12,12 +13,12 @@ var data=[{
     "name":"kumar",
     "place":"kinnigoli"
 }]
-
+console.log('adffgaa');
 module.exports = function(app){
-    
-    app.get('/api/todo/',function(req,res){
+    console.log('adffgaa');
+    router.get('/api/todo',function(req,res){
+        console.log('abv');
         data.forEach(function(item){
-           
                 res.send(item);
         });
         });
